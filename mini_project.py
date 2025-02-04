@@ -30,11 +30,21 @@ new_text = ''
 i = 0
 while i < len(lines):
     line = lines[i]
+    line = line.replace("и т.д. и т.п.", UNIQ_MARK)
     # - строка не должна начинаться с пробелов, допустима только табуляция (отступ).
+    line_lst = line.split("\t")
+    print(line_lst)     # ['   ', "   I'm fine. Thank you   for your question!           "]
+    j = 0
+    new_line = ''
+    while j < len(line_lst):
+
+        j += 1
+
     # - сделать так, чтобы все предложения начинались с большой буквы;
     # - не было подряд несколько пробелов и знаков пунктуации;
     # - Не забывайте, что точка не всегда значит конец предложения! Например, и т.д. и т.п.
 
+    line = line.replace(UNIQ_MARK, "и т.д. и т.п.")
     new_text += line + '\n'
     i += 1
 
