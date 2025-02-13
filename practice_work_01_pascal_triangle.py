@@ -10,11 +10,12 @@ from math import factorial as f
 
 
 def binomial_coefficient(n, k):
-    return 
+    return f(n) // (f(k) * f(n - k))
 
 
 def pascal_triangle(num_rows):
-    pass
+    for i in range(num_rows + 1):
+        pass
         
     print("Треугольник Паскаля записан в файл 'pascal_triangle.txt'.")
 
