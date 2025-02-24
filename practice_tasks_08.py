@@ -25,7 +25,33 @@ print(result)   # THE quick brown FOX jumps over THE lazy DOG
 А слова длины 2 - на чёрточки.
 Каждое выполнение функции - одно условие и одно действие.
 """
+def transform(n_law: list, text: str='') -> str:
+    new_words = []
+    words = text.split()
 
+    for word in words:
+        len_word = len(word)
+        func_lst = [f for n, f in n_law if len_word == n]  # [lambda w: w.upper()]
+        if func_lst:
+            func = func_lst[0]
+            new_word = func(word)
+        else:
+            new_word = word
+        new_words.append(new_word)
+
+    return ' '.join(new_words)
+    # return ' '.join([w.n_law[1] if len(w) == n_law[0] else w for w in text.split()])
+
+
+res = transform(
+    [
+        (3, lambda w: w.upper()),
+        (4, lambda w: '_'.join(list(w))),
+        (5, lambda w: '*****'),
+    ],
+    text=sentence
+)
+print(res)
 
 """ =============================================================================================
 3. Подумайте, как уменьшить количество кода в решении задачи 2, например,
