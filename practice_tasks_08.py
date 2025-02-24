@@ -43,6 +43,19 @@ def transform(n_law: list, text: str='') -> str:
     # return ' '.join([w.n_law[1] if len(w) == n_law[0] else w for w in text.split()])
 
 
+def transform_2(n_law: list, text: str = "") -> str:
+    words = text.split()
+    t_words = []
+    for word in words:
+        t_word = word
+        for length, func in n_law:
+            if len(word) == length:
+                t_word = func(word)
+        t_words.append(t_word)
+    return ' '.join(t_words)
+
+
+
 res = transform(
     [
         (3, lambda w: w.upper()),
