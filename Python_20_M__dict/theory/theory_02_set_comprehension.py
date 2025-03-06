@@ -4,7 +4,7 @@
 """
 
 new_set = {x for x in range(5)}
-print(type(new_set))   # <class 'frozenset'>
+print(type(new_set))   # <class 'set'>
 print(new_set)         # {0, 1, 2, 3, 4}
 
 
