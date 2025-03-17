@@ -25,7 +25,7 @@ PS
  - первые 2 символа - буквы
  - остальные 20 символов - цифры
 """
-
+from collections import defaultdict
 from datetime import datetime
 from pprint import pprint
 
@@ -53,9 +53,16 @@ users = [
 #              'digits!']}
 
 
-pass
-# Создать классы пользовательских исключений
-pass
+class NameException(Exception):
+    pass
+
+
+class AgeException(Exception):
+    pass
+
+
+class IBANException(Exception):
+    pass
 
 
 def name_validation(name, surname) -> bool:
@@ -65,7 +72,9 @@ def name_validation(name, surname) -> bool:
     :return: True, если имя и фамилия не пустая строка или None
     :raises NameException: Empty name or/and surname
     """
-    pass
+    if not name or not surname:
+        raise NameException("Empty name or/and surname")
+    return True
 
 
 def age_validation(birth_date: str) -> bool:
@@ -75,6 +84,9 @@ def age_validation(birth_date: str) -> bool:
     :return: True, если возраст 18 лет и более.
     :raises AgeException:  The client's age cannot be less than 18 years!
     """
+    if datetime.now().year - int(birth_date.split('-')[0]) < 18:
+        raise AgeException("The client's age cannot be less than 18 years!")
+    return True
 
 
 def iban_validation(iban: str) -> bool:
@@ -87,11 +99,42 @@ def iban_validation(iban: str) -> bool:
         The first two characters must be letters!
         The last twenty characters must be digits!
     """
+    message = []
+    if len(iban) != 22:
+        message.append("Incorrect Length of IBAN!")
+    if iban[:2] != 'DE':
+        message.append("The first two characters must be letters!")
+    if iban[2:].isdigit():
+        message.append("The last twenty characters must be digits!")
+
+    if message:
+        raise IBANException(f"{'; '.join(message)}")
+    return True
 
 
 def validate_customers(list_tuples: list[tuple[str, ...]]) -> dict[str, list[str]]:
     """Функция формирует словарь из всех возможных ошибок по каждому клиентов"""
+    # ('', 'Doe', '2005-03-28', 'DE44443333222211110000'),
 
+    d = defaultdict(list)
+    for client in list_tuples:
+        name, surname, date, iban = client
+        try:
+            name_validation(name, surname)
+        except NameException as e:
+            d[f"{name}_{surname}"].append(f"{e.__class__.__name__}: {e}")
+
+        try:
+            age_validation(date)
+        except AgeException as e:
+            d[f"{name}_{surname}"].append(f"{e.__class__.__name__}: {e}")
+
+        try:
+            iban_validation(iban)
+        except IBANException as e:
+            d[f"{name}_{surname}"].append(f"{e.__class__.__name__}: {e}")
+
+    return d
 
 def main():
     pprint(validate_customers(users))
