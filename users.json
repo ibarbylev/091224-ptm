@@ -1,0 +1,44 @@
+[
+    {
+        "name": "",
+        "surname": "Doe",
+        "birth_date": "2005-03-28",
+        "iban": "DE44443333222211110000"
+    },
+    {
+        "name": "John",
+        "surname": "Smith",
+        "birth_date": "2008-10-25",
+        "iban": "XE345678901234567890"
+    },
+    {
+        "name": "Michael",
+        "surname": "Brown",
+        "birth_date": "1990-05-15",
+        "iban": "DE89370400440532013000"
+    },
+    {
+        "name": "Anna",
+        "surname": "Johnson",
+        "birth_date": "1985-12-07",
+        "iban": "5511112222333344445555"
+    },
+    {
+        "name": "Emily",
+        "surname": "Taylor",
+        "birth_date": "1999-08-03",
+        "iban": "DE9876543210987654321A"
+    },
+    {
+        "name": "",
+        "surname": "Taylor",
+        "birth_date": "2020-08-03",
+        "iban": "1465DE9876543210987654321A"
+    },
+    {
+        "name": "Robert",
+        "surname": "Davis",
+        "birth_date": "1992-04-12",
+        "iban": "DE1234567890123456789012"
+    }
+]
