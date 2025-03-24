@@ -1,23 +1,20 @@
-"""Напишите генератор, который принимает в качестве аргумента
-генераторной функции generator_unique_elements_from_list(lst) список элементов
-и выдает только уникальные элементы, не изменяя их порядок в списке.
-Проверьте правильность работы генератора с помощью цикла.
+"""Реализуйте функцию word_multiply(). Она должна принимать два параметра:
 
-Пример:
-lst = [1, 2, 2, 3, 4, 1, 5, 3, 4]
-Результат:
-1
-2
-3
-4
-5"""
+Строку
+Число, которое обозначает, сколько раз нужно повторить строку
+
+text = 'python'
+print(word_multiply(text, 2)) # => pythonpython
+print(word_multiply(text, 0)) # =>
+
+Укажите аннотации типов при объявлении функции.
+"""
 
 
-def generator_unique_elements_from_list(stream: list):
+def word_multiply():
     pass
 
 
-input_stream = [1, 2, 2, 3, 4, 1, 5, 3, 4]
-
-for unique in generator_unique_elements_from_list(input_stream):
-    print(unique)
+text = 'python'
+print(word_multiply(text, 2)) # => pythonpython
+print(word_multiply(text, 0)) # =>
