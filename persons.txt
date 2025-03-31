@@ -1,0 +1,4 @@
+Sergey;35
+Ivan;25
+Svetlana;20
+Maria;27
