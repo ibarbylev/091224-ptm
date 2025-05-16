@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Custom styles for the table and menu */
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 1rem;
+        }
+        .table-wrapper {
+            margin-top: 1rem;
+        }
+        .data th, .data td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .data thead th {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Horizontal Menu -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Brand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            <li><a class="dropdown-item" href="#">SEO Services</a></li>
+                            <li><a class="dropdown-item" href="#">Consulting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><a class="dropdown-item" href="#">FAQ</a></li>
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Table with currency exchange rates -->
+        <h1 class="mt-4">Official Exchange Rates</h1>
+        <hr>
+        <div class="table-wrapper">
+            <div class="table">
+                <table class="data table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Цифр. код</th>
+                            <th>Букв. код</th>
+                            <th>Единиц</th>
+                            <th>Валюта</th>
+                            <th>Курс</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>036</td>
+                            <td>AUD</td>
+                            <td>1</td>
+                            <td>Австралийский доллар</td>
+                            <td>58,0043</td>
+                        </tr>
+                        <tr>
+                            <td>944</td>
+                            <td>AZN</td>
+                            <td>1</td>
+                            <td>Азербайджанский манат</td>
+                            <td>51,7600</td>
+                        </tr>
+                        <tr>
+                            <td>051</td>
+                            <td>AMD</td>
+                            <td>100</td>
+                            <td>Армянских драмов</td>
+                            <td>22,6655</td>
+                        </tr>
+                        <tr>
+                            <td>933</td>
+                            <td>BYN</td>
+                            <td>1</td>
+                            <td>Белорусский рубль</td>
+                            <td>28,1601</td>
+                        </tr>
+                        <tr>
+                            <td>975</td>
+                            <td>BGN</td>
+                            <td>1</td>
+                            <td>Болгарский лев</td>
+                            <td>49,1738</td>
+                        </tr>
+                        <tr>
+                            <td>986</td>
+                            <td>BRL</td>
+                            <td>1</td>
+                            <td>Бразильский реал</td>
+                            <td>15,6656</td>
+                        </tr>
+                        <tr>
+                            <td>348</td>
+                            <td>HUF</td>
+                            <td>100</td>
+                            <td>Венгерских форинтов</td>
+                            <td>24,2864</td>
+                        </tr>
+                        <tr>
+                            <td>410</td>
+                            <td>KRW</td>
+                            <td>1000</td>
+                            <td>Вон Республики Корея</td>
+                            <td>63,8688</td>
+                        </tr>
+                        <tr>
+                            <td>704</td>
+                            <td>VND</td>
+                            <td>10000</td>
+                            <td>Вьетнамских донгов</td>
+                            <td>36,2704</td>
+                        </tr>
+                        <tr>
+                            <td>344</td>
+                            <td>HKD</td>
+                            <td>1</td>
+                            <td>Гонконгский доллар</td>
+                            <td>11,3028</td>
+                        </tr>
+                        <tr>
+                            <td>981</td>
+                            <td>GEL</td>
+                            <td>1</td>
+                            <td>Грузинский лари</td>
+                            <td>32,5078</td>
+                        </tr>
+                        <tr>
+                            <td>208</td>
+                            <td>DKK</td>
+                            <td>1</td>
+                            <td>Датская крона</td>
+                            <td>12,8888</td>
+                        </tr>
+                        <tr>
+                            <td>784</td>
+                            <td>AED</td>
+                            <td>1</td>
+                            <td>Дирхам ОАЭ</td>
+                            <td>23,9597</td>
+                        </tr>
+                        <tr>
+                            <td>840</td>
+                            <td>USD</td>
+                            <td>1</td>
+                            <td>Доллар США</td>
+                            <td>87,9920</td>
+                        </tr>
+                        <tr>
+                            <td>978</td>
+                            <td>EUR</td>
+                            <td>1</td>
+                            <td>Евро</td>
+                            <td>95,1844</td>
+                        </tr>
+                        <tr>
+                            <td>356</td>
+                            <td>INR</td>
+                            <td>10</td>
+                            <td>Индийских рупий</td>
+                            <td>10,4877</td>
+                        </tr>
+                        <tr>
+                            <td>360</td>
+                            <td>IDR</td>
+                            <td>10000</td>
+                            <td>Индонезийских рупий</td>
+                            <td>55,1605</td>
+                        </tr>
+                        <tr>
+                            <td>398</td>
+                            <td>KZT</td>
+                            <td>100</td>
+                            <td>Казахстанских тенге</td>
+                            <td>18,4415</td>
+                        </tr>
+                        <tr>
+                            <td>124</td>
+                            <td>CAD</td>
+                            <td>1</td>
+                            <td>Канадский доллар</td>
+                            <td>64,0268</td>
+                        </tr>
+                        <tr>
+                            <td>156</td>
+                            <td>CNY</td>
+                            <td>1</td>
+                            <td>Китайский юань</td>
+                            <td>11,8911</td>
+                        </tr>
+                        <tr>
+                            <td>498</td>
+                            <td>MDL</td>
+                            <td>10</td>
+                            <td>Молдавских леев</td>
+                            <td>49,8140</td>
+                        </tr>
+                        <tr>
+                            <td>554</td>
+                            <td>NZD</td>
+                            <td>1</td>
+                            <td>Новозеландский доллар</td>
+                            <td>52,9668</td>
+                        </tr>
+                        <tr>
+                            <td>578</td>
+                            <td>NOK</td>
+                            <td>10</td>
+                            <td>Норвежских крон</td>
+                            <td>80,9382</td>
+                        </tr>
+                        <tr>
+                            <td>985</td>
+                            <td>PLN</td>
+                            <td>1</td>
+                            <td>Польский злотый</td>
+                            <td>22,2180</td>
+                        </tr>
+                        <tr>
+                            <td>946</td>
+                            <td>RON</td>
+                            <td>1</td>
+                            <td>Румынский лей</td>
+                            <td>19,3041</td>
+                        </tr>
+                        <tr>
+                            <td>941</td>
+                            <td>RSD</td>
+                            <td>100</td>
+                            <td>Сербских динаров</td>
+                            <td>82,1396</td>
+                        </tr>
+                        <tr>
+                            <td>702</td>
+                            <td>SGD</td>
+                            <td>1</td>
+                            <td>Сингапурский доллар</td>
+                            <td>66,4291</td>
+                        </tr>
+                        <tr>
+                            <td>949</td>
+                            <td>TRY</td>
+                            <td>10</td>
+                            <td>Турецких лир</td>
+                            <td>26,2842</td>
+                        </tr>
+                        <tr>
+                            <td>860</td>
+                            <td>UZS</td>
+                            <td>10000</td>
+                            <td>Узбекских сумов</td>
+                            <td>69,5480</td>
+                        </tr>
+                        <tr>
+                            <td>980</td>
+                            <td>UAH</td>
+                            <td>10</td>
+                            <td>Украинских гривен</td>
+                            <td>21,4653</td>
+                        </tr>
+                        <tr>
+                            <td>826</td>
+                            <td>GBP</td>
+                            <td>1</td>
+                            <td>Фунт стерлингов Соединенного королевства</td>
+                            <td>111,8818</td>
+                        </tr>
+                        <tr>
+                            <td>203</td>
+                            <td>CZK</td>
+                            <td>10</td>
+                            <td>Чешских крон</td>
+                            <td>38,0588</td>
+                        </tr>
+                        <tr>
+                            <td>752</td>
+                            <td>SEK</td>
+                            <td>10</td>
+                            <td>Шведских крон</td>
+                            <td>83,6634</td>
+                        </tr>
+                        <tr>
+                            <td>756</td>
+                            <td>CHF</td>
+                            <td>1</td>
+                            <td>Швейцарский франк</td>
+                            <td>101,6661</td>
+                        </tr>
+                        <tr>
+                            <td>710</td>
+                            <td>ZAR</td>
+                            <td>10</td>
+                            <td>Южноафриканских рэндов</td>
+                            <td>47,9069</td>
+                        </tr>
+                        <tr>
+                            <td>392</td>
+                            <td>JPY</td>
+                            <td>100</td>
+                            <td>Японских иен</td>
+                            <td>59,6394</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-W1pB2n/fQyH2tLV3ACMBBpQ3m7ioOZQtI4sbYVzt0S+2A7V5Jwv/A4+JFAIF+ZA3" crossorigin="anonymous"></script>
+</body>
+</html>

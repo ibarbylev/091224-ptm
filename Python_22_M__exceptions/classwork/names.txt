@@ -1,0 +1,6 @@
+Ivanov		Ivan		1980		2	80
+Smith		Ann		    2000		1	67
+Petrov		Petro		1999		1	90	43
+Schmidt	    Marta		1976		3
+Johnson	    John		1965g		5	99
+Archer		Leonard		1978		v5	51
